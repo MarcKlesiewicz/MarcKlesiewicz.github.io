@@ -5,14 +5,11 @@ import 'package:template/router/router.gr.dart';
 @AutoRouterConfig()
 class AppRouter extends $AppRouter {
   AppRouter({required AuthGuard authGuard}) : super() {
-    routes.addAll([
-      AutoRoute(page: FlutterSplashRoute.page, initial: true),
-      AutoRoute(page: RootRoute.page, children: [
-        AutoRoute(page: NestedRoute1.page),
-        AutoRoute(page: NestedRoute2.page),
-        AutoRoute(page: NestedRoute3.page),
-      ]),
-    ]);
+    routes.addAll(
+      [
+        AutoRoute(page: HomeRoute.page, initial: true, path: '/home'),
+      ],
+    );
   }
 
   @override
