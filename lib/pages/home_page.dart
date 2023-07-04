@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:template/theme/theme_definition.dart';
-import 'package:template/widgets/text/styled_text.dart';
+import 'package:template/widgets/misc/default_navbar.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -10,10 +10,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: context.colors.primary,
-        child: const DisplaySmall.onPrimary('Home page testing'),
-      ),
-    );
+        backgroundColor: context.colors.primary,
+        body: CustomScrollView(
+          slivers: [DefaultNavbar()],
+        ));
   }
 }

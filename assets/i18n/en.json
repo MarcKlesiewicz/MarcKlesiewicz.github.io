@@ -22,5 +22,8 @@
       "unknown": "Opps, something went wrong, try again or contact support."
     }
   },
-  "licence": "Licence"
+  "licence": "Licence",
+  "about_me": "About me",
+  "portfolio": "Portfolio",
+  "contact": "Contact"
 }
