@@ -22,5 +22,13 @@
       "unknown": "Hov, noget gik galt, prøv igen eller kontakt support"
     }
   },
-  "licence": "Licens"
+  "licence": "Licens",
+  "about_me": "Om mig",
+  "portfolio": "Portefølje",
+  "contact": "Kontakt",
+  "work": "Arbejde",
+  "app_developer": "Appudvikler",
+  "waiter": "Serveringsmedarbejder",
+  "guide": "Rejsekordinator",
+  "lifeguard": "Livredder/instruktør"
 }
