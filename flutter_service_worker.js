@@ -3,8 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "9cc86f4421f90874c22871e915dc2d64",
-"assets/AssetManifest.json": "556624184c2a67126de14ed15c614709",
+const RESOURCES = {"assets/AssetManifest.bin": "d211db727f8de8e415529f538f9cdc63",
+"assets/AssetManifest.json": "70edb7997a59857541001ba4ea5a5dd3",
 "assets/assets/animations/lunar_expansion.riv": "12177fa268902886002021e1e8726b69",
 "assets/assets/animations/menu.riv": "c91f627404157294a913cc19154a4931",
 "assets/assets/animations/wave.riv": "42689bafb2d383ab2127b14cefdb26c7",
@@ -47,6 +47,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "9cc86f4421f90874c22871e915dc2d64
 "assets/assets/svgs/brand_en.svg": "de3d6aaaf053e9f376ed1a18b69c3db0",
 "assets/assets/svgs/facebook_logo.svg": "d132a6d0433c103e5a78a7369fac312d",
 "assets/assets/svgs/github_logo.svg": "03aae0f6f51c27a5bb053d7f2d3efc76",
+"assets/assets/svgs/globe.svg": "67678ab22f3e719c68f2969fe2ac25bd",
 "assets/assets/svgs/instagram_logo.svg": "ea5ebd1b974ad356dc240080f70475d4",
 "assets/assets/svgs/linkedin_logo.svg": "d396621a43b15796a373db7d195a8f78",
 "assets/assets/svgs/logo.svg": "f74d37dfb5dcc32ebb039f0ae4ee921c",
@@ -68,9 +69,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "9cc86f4421f90874c22871e915dc2d64
 "flutter.js": "6b515e434cea20006b3ef1726d2c8894",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "47d13559ab4408e6bbeb94f089e71d5a",
-"/": "47d13559ab4408e6bbeb94f089e71d5a",
-"main.dart.js": "a98b18b7eed0ed14cf489b5c619206a9",
+"index.html": "8f2c0997858a2b50b07b5a09587a77c6",
+"/": "8f2c0997858a2b50b07b5a09587a77c6",
+"main.dart.js": "39d143451955fe2890108db0afff91de",
 "manifest.json": "246661e9355cf24b4f9cfc72cc000cc2",
 "version.json": "c4fa1175a6f24aea36519321aa977adf"};
 // The application shell files that are downloaded before a service worker can
