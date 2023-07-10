@@ -112,6 +112,10 @@ class __LocaleSelectorState extends State<_LocaleSelector> {
                 ),
                 icon: SvgPicture.asset(
                   'svgs/globe.svg',
+                  colorFilter: ColorFilter.mode(
+                    context.colors.secondary,
+                    BlendMode.srcIn,
+                  ),
                 ),
               ),
               AnimatedOpacity(
