@@ -36,6 +36,7 @@ class _HeroSectionState extends State<HeroSection> {
 
   @override
   Widget build(BuildContext context) {
+    final appLocale = Localizations.localeOf(context).toString();
     if (_file != null) {
       return Stack(
         alignment: Alignment.center,
@@ -46,7 +47,9 @@ class _HeroSectionState extends State<HeroSection> {
           ),
           Padding(
             padding: Insets.x05,
-            child: SvgPicture.asset('assets/svgs/brand_en.svg'),
+            child: SvgPicture.asset(appLocale == 'da'
+                ? 'assets/svgs/brand_da.svg'
+                : 'assets/svgs/brand_en.svg'),
           )
         ],
       );

@@ -2,7 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+import 'package:marc_klesiewicz/widgets/home/social_section.dart';
 import 'package:rive/rive.dart';
 import 'package:marc_klesiewicz/theme/theme_definition.dart';
 import 'package:marc_klesiewicz/utils/list_extensions.dart';
@@ -32,6 +34,15 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
           widget.child,
           _MenuView(showMenu: _showMenu),
           Positioned(
+            left: 16,
+            top: 16,
+            child: AnimatedOpacity(
+              opacity: _showMenu ? 1 : 0,
+              duration: Durations.ms200,
+              child: _LocaleSelector(showMenu: _showMenu),
+            ),
+          ),
+          Positioned(
             right: 16,
             top: 16,
             child: _MenuButton(
@@ -48,6 +59,90 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
         ],
       ),
     );
+  }
+}
+
+class _LocaleSelector extends StatefulWidget {
+  final bool showMenu;
+  const _LocaleSelector({
+    Key? key,
+    required this.showMenu,
+  }) : super(key: key);
+
+  @override
+  State<_LocaleSelector> createState() => __LocaleSelectorState();
+}
+
+class __LocaleSelectorState extends State<_LocaleSelector> {
+  bool isHovering = false;
+  @override
+  Widget build(BuildContext context) {
+    final appLocale = Localizations.localeOf(context).toString();
+    if (widget.showMenu) {
+      return Tooltip(
+        message: appLocale == 'da'
+            ? 'Change locale to english'
+            : 'Skift locale til dansk',
+        decoration: BoxDecoration(
+          color: context.colors.secondary,
+          borderRadius: BorderRadiuses.r02,
+        ),
+        textStyle: const TextStyle(
+          fontFamily: 'Garamond',
+          fontWeight: FontWeight.w600,
+          fontSize: 16,
+        ),
+        child: MouseRegion(
+          cursor: SystemMouseCursors.click,
+          onEnter: (event) {
+            setState(() {
+              isHovering = true;
+            });
+          },
+          onExit: (event) {
+            setState(() {
+              isHovering = false;
+            });
+          },
+          child: Stack(
+            children: [
+              IconButton(
+                onPressed: () => _changeAppLocale(
+                  appLocale == 'da' ? 'en' : 'da',
+                ),
+                icon: SvgPicture.asset(
+                  'svgs/globe.svg',
+                ),
+              ),
+              AnimatedOpacity(
+                opacity: isHovering ? 1 : 0,
+                duration: Durations.ms200,
+                child: IconButton(
+                  onPressed: () => _changeAppLocale(
+                    appLocale == 'da' ? 'en' : 'da',
+                  ),
+                  icon: SvgPicture.asset(
+                    'svgs/globe.svg',
+                    colorFilter: ColorFilter.mode(
+                      context.colors.onPrimary,
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    } else {
+      return const SizedBox();
+    }
+  }
+
+  Future<void> _changeAppLocale(String locale) async {
+    if (context.mounted) {
+      changeLocale(context, locale);
+    }
   }
 }
 
@@ -115,29 +210,44 @@ class _MenuView extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           color: context.colors.tertiary.withOpacity(0.3),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _NavbarItems(
-                onPressed: () {},
-                text: translate('home'),
-                isSelected: true,
+              const Expanded(
+                flex: 1,
+                child: SizedBox(),
               ),
-              _NavbarItems(
-                onPressed: () {},
-                text: translate('who_is_marc'),
-                isSelected: true,
+              Expanded(
+                flex: 3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _NavbarItems(
+                      onPressed: () {},
+                      text: translate('home'),
+                      isSelected: true,
+                    ),
+                    _NavbarItems(
+                      onPressed: () {},
+                      text: translate('who_is_marc'),
+                      isSelected: true,
+                    ),
+                    _NavbarItems(
+                      onPressed: () {},
+                      text: translate('projects'),
+                      isSelected: true,
+                    ),
+                    _NavbarItems(
+                      onPressed: () {},
+                      text: translate('side_quests'),
+                      isSelected: true,
+                    ),
+                  ].gap(Gaps.mdV),
+                ),
               ),
-              _NavbarItems(
-                onPressed: () {},
-                text: translate('projects'),
-                isSelected: true,
-              ),
-              _NavbarItems(
-                onPressed: () {},
-                text: translate('side_quests'),
-                isSelected: true,
-              ),
-            ].gap(Gaps.mdV),
+              const Expanded(
+                flex: 1,
+                child: SocialSection(),
+              )
+            ],
           ),
         ),
       ),
