@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:template/theme/theme_definition.dart';
-import 'package:template/utils/utils.dart';
+import 'package:marc_klesiewicz/theme/theme_definition.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
 
 enum SnackbarType { info, error, success, warning }
 

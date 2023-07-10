@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:template/theme/theme_definition.dart';
-import 'package:template/utils/list_extensions.dart';
-import 'package:template/utils/utils.dart';
-import 'package:template/widgets/dialogs/show_default_dialog.dart';
-import 'package:template/widgets/text/styled_text.dart';
+import 'package:marc_klesiewicz/theme/theme_definition.dart';
+import 'package:marc_klesiewicz/utils/list_extensions.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
+import 'package:marc_klesiewicz/widgets/dialogs/show_default_dialog.dart';
+import 'package:marc_klesiewicz/widgets/text/styled_text.dart';
 
 class DefaultNavbar extends StatelessWidget {
   const DefaultNavbar({Key? key}) : super(key: key);

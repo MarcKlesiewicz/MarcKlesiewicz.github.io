@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:template/router/guards.dart';
-import 'package:template/router/router.gr.dart';
+import 'package:marc_klesiewicz/router/guards.dart';
+import 'package:marc_klesiewicz/router/router.gr.dart';
 
 @AutoRouterConfig()
 class AppRouter extends $AppRouter {

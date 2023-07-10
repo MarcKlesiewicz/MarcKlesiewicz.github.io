@@ -2,13 +2,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:rive/rive.dart';
-import 'package:template/theme/theme_definition.dart';
-import 'package:template/utils/list_extensions.dart';
-import 'package:template/utils/utils.dart';
-import 'package:template/widgets/misc/animation_scene.dart';
+import 'package:marc_klesiewicz/theme/theme_definition.dart';
+import 'package:marc_klesiewicz/utils/list_extensions.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
+import 'package:marc_klesiewicz/widgets/misc/animation_scene.dart';
 
 class DefaultScaffold extends StatefulWidget {
   final Widget child;
@@ -86,10 +85,13 @@ class __MenuButtonState extends State<_MenuButton> {
 
   @override
   Widget build(BuildContext context) {
-    return AnimationScene(
-      _file!.mainArtboard,
-      trigger: widget.showMenu ? 'closePressed' : 'openPressed',
-      onTap: () => widget.onChanged(),
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: AnimationScene(
+        _file!.mainArtboard,
+        trigger: widget.showMenu ? 'closePressed' : 'openPressed',
+        onTap: () => widget.onChanged(),
+      ),
     );
   }
 }

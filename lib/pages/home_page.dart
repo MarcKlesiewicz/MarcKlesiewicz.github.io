@@ -1,11 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:template/theme/theme_definition.dart';
-import 'package:template/utils/utils.dart';
-import 'package:template/widgets/home/hero_section.dart';
-import 'package:template/widgets/home/social_section.dart';
-import 'package:template/widgets/home/work_section.dart';
-import 'package:template/widgets/misc/default_scaffold.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
+import 'package:marc_klesiewicz/widgets/home/hero_section.dart';
+import 'package:marc_klesiewicz/widgets/home/social_section.dart';
+import 'package:marc_klesiewicz/widgets/home/work_section.dart';
+import 'package:marc_klesiewicz/widgets/misc/default_scaffold.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {

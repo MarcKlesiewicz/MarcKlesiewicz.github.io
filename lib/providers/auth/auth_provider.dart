@@ -7,12 +7,12 @@
 // import 'package:flutter/widgets.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
 // import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-// import 'package:template/providers/api/client_provider.dart';
-// import 'package:template/providers/auth/api_endpoint_provider.dart';
-// import 'package:template/providers/auth/authstate.dart';
-// import 'package:template/providers/auth/authtokens.dart';
-// import 'package:template/providers/auth/jwt_payload.dart';
-// import 'package:template/providers/phoenix_provider.dart';
+// import 'package:marc_klesiewicz/providers/api/client_provider.dart';
+// import 'package:marc_klesiewicz/providers/auth/api_endpoint_provider.dart';
+// import 'package:marc_klesiewicz/providers/auth/authstate.dart';
+// import 'package:marc_klesiewicz/providers/auth/authtokens.dart';
+// import 'package:marc_klesiewicz/providers/auth/jwt_payload.dart';
+// import 'package:marc_klesiewicz/providers/phoenix_provider.dart';
 
 // const accessTokenKey = "accessToken";
 // const refreshTokenKey = "refreshToken";

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/theme/color_extension.dart';
+import 'package:marc_klesiewicz/theme/color_extension.dart';
 
 ThemeData defaultTheme() => ThemeData(
       useMaterial3: true,

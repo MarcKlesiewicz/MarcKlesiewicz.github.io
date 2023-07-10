@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:rive/rive.dart';
-import 'package:template/theme/theme_definition.dart';
-import 'package:template/utils/list_extensions.dart';
-import 'package:template/utils/utils.dart';
-import 'package:template/widgets/misc/animation_scene.dart';
+import 'package:marc_klesiewicz/theme/theme_definition.dart';
+import 'package:marc_klesiewicz/utils/list_extensions.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
+import 'package:marc_klesiewicz/widgets/misc/animation_scene.dart';
 
 class WorkSection extends StatefulWidget {
   const WorkSection({Key? key}) : super(key: key);

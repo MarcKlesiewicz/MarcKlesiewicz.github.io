@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
@@ -23,13 +25,13 @@ class Alert<T> {
     var duration,
     required this.message,
     this.data,
-  }) : this.duration = duration ?? baseDuration;
+  }) : duration = duration ?? baseDuration;
 }
 
 class AlertsNotifier extends StateNotifier<List<Alert>> {
   AlertsNotifier() : super([]);
 
-  get hasErrors => state.length > 0;
+  get hasErrors => state.isNotEmpty;
 
   void addError(String message,
       {Duration duration = const Duration(seconds: 10)}) {

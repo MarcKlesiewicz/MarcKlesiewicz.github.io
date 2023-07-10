@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rive/rive.dart';
-import 'package:template/utils/utils.dart';
-import 'package:template/widgets/misc/animation_scene.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
+import 'package:marc_klesiewicz/widgets/misc/animation_scene.dart';
 
 class HeroSection extends StatefulWidget {
   const HeroSection({

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:template/providers/auth/authtokens.dart';
+import 'package:marc_klesiewicz/providers/auth/authtokens.dart';
 
 part 'authstate.freezed.dart';
 

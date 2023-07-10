@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:template/widgets/buttons/async_elevated_button.dart';
-import 'package:template/widgets/buttons/async_filled_button.dart';
+import 'package:marc_klesiewicz/widgets/buttons/async_elevated_button.dart';
+import 'package:marc_klesiewicz/widgets/buttons/async_filled_button.dart';
 
 class ElevatedDangerButton extends StatelessWidget {
   final Future<void> Function()? onPressed;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:template/theme/theme_definition.dart';
-import 'package:template/utils/list_extensions.dart';
-import 'package:template/utils/utils.dart';
+import 'package:marc_klesiewicz/theme/theme_definition.dart';
+import 'package:marc_klesiewicz/utils/list_extensions.dart';
+import 'package:marc_klesiewicz/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialSection extends StatelessWidget {
