@@ -75,6 +75,10 @@ class __SocialButtonState extends State<_SocialButton> {
             onPressed: () => _launchUrl(),
             icon: SvgPicture.asset(
               'assets/svgs/${widget.fileName}.svg',
+              colorFilter: ColorFilter.mode(
+                context.colors.secondary,
+                BlendMode.srcIn,
+              ),
             ),
           ),
           AnimatedOpacity(
