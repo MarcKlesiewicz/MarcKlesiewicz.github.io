@@ -71325,12 +71325,12 @@ $S:0}
 A.Cy.prototype={
 ae(){return new A.a0D(B.o)}}
 A.a0D.prototype={
-P(a){var s,r,q,p,o=this,n=null,m=a.aC(t.Gk).r.f.nE("_")
-if(o.a.c){s=m==="da"?"Change locale to english":"Skift locale til dansk"
+P(a){var s,r,q,p,o=this,n=null,m="assets/svgs/globe.svg",l=a.aC(t.Gk).r.f.nE("_")
+if(o.a.c){s=l==="da"?"Change locale to english":"Skift locale til dansk"
 r=A.h8(a)
-q=A.a8a(A.Rk("svgs/globe.svg",new A.ot(A.h8(a).a.f,B.cv,n,B.eA)),new A.aok(o,m))
+q=A.a8a(A.Rk(m,new A.ot(A.h8(a).a.f,B.cv,n,B.eA)),new A.aok(o,l))
 p=o.d?1:0
-return A.aLW(A.pb(A.nv(B.cu,A.a([q,A.ar0(A.a8a(A.Rk("assets/svgs/globe.svg",new A.ot(A.h8(a).a.c,B.cv,n,B.eA)),new A.aol(o,m)),B.aa,p)],t.D),B.cj),B.bb,new A.aom(o),new A.aon(o),n),new A.f9(r.a.f,n,n,B.Fa,n,n,B.bt),s,B.a65)}else return B.hD},
+return A.aLW(A.pb(A.nv(B.cu,A.a([q,A.ar0(A.a8a(A.Rk(m,new A.ot(A.h8(a).a.c,B.cv,n,B.eA)),new A.aol(o,l)),B.aa,p)],t.D),B.cj),B.bb,new A.aom(o),new A.aon(o),n),new A.f9(r.a.f,n,n,B.Fa,n,n,B.bt),s,B.a65)}else return B.hD},
 um(a){return this.Zm(a)},
 Zm(a){var s=0,r=A.W(t.H),q=this,p
 var $async$um=A.X(function(b,c){if(b===1)return A.T(c,r)
