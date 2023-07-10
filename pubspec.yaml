@@ -31,12 +31,16 @@ dependencies:
 
   # Misc
   auto_size_text: ^3.0.0
-  google_fonts: ^4.0.4 # All google fonts
   firebase_crashlytics: ^3.3.1
   firebase_core: ^2.13.0
   universal_platform: ^1.0.0+1
   dio: ^5.0.0
   flutter_svg: ^2.0.7
+  responsive_builder: ^0.7.0
+  dyn_mouse_scroll: ^1.0.7
+  rive: ^0.7.16
+  rive_common: ^0.1.0
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   flutter_test:
@@ -64,3 +68,44 @@ flutter:
     - assets/i18n/
     - assets/icons/
     - assets/svgs/
+    - assets/fonts/
+    - assets/images/
+    - assets/animations/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Montserrat-Black.ttf
+          weight: 900
+    - family: Garamond
+      fonts:
+        - asset: assets/fonts/EBGaramond-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/EBGaramond-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/EBGaramond-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/EBGaramond-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/EBGaramond-ExtraBold.ttf
+          weight: 800
+    - family: BerkshireSwash
+      fonts:
+        - asset: assets/fonts/BerkshireSwash-Regular.ttf
+          weight: 400

@@ -31,6 +31,9 @@ class DefaultNavbar extends StatelessWidget {
       )
     ].gap(Gaps.mdH);
     return SliverAppBar(
+      backgroundColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+      shadowColor: Colors.transparent,
       automaticallyImplyLeading: false,
       toolbarHeight: 100,
       leadingWidth: 75,
@@ -38,12 +41,7 @@ class DefaultNavbar extends StatelessWidget {
         padding: Insets.l02,
         child: _HomeButton(),
       ),
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: actionItems,
-      ),
-      centerTitle: true,
-      // actions: actionItems,
+      actions: actionItems,
     );
   }
 }

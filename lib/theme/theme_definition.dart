@@ -2,14 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:template/theme/color_extension.dart';
 
 ThemeData defaultTheme() => ThemeData(
+      useMaterial3: true,
+      fontFamily: 'Montserrat',
+      typography: Typography(
+        black: const TextTheme(
+          displayLarge: TextStyle(),
+          displayMedium: TextStyle(),
+          displaySmall: TextStyle(),
+          headlineLarge: TextStyle(),
+          headlineMedium: TextStyle(),
+          headlineSmall: TextStyle(),
+          titleLarge: TextStyle(),
+          titleMedium: TextStyle(),
+          titleSmall: TextStyle(),
+          labelLarge: TextStyle(),
+          labelMedium: TextStyle(),
+          labelSmall: TextStyle(),
+          bodyLarge: TextStyle(),
+          bodyMedium: TextStyle(),
+          bodySmall: TextStyle(),
+        ).apply(
+          fontFamily: 'Montserrat',
+          bodyColor: Colors.black,
+          displayColor: Colors.black,
+        ),
+      ),
       colorScheme: ColorScheme(
         brightness: Brightness.light,
-        primary: const Color(0xff0e1a26),
-        // onPrimary: Color(0xffede6db),
+        primary: const Color(0xff050024),
         onPrimary: const Color(0xffece4dc),
-        secondary: const Color(0xffff6c8a),
+        secondary: const Color(0xff7E6300),
         onSecondary: const Color(0xffece4dc),
-        tertiary: const Color(0xffbb004b),
+        tertiary: const Color(0xff600106),
         onTertiary: const Color(0xffece4dc),
         error: const Color(0xffBA1A1A),
         onError: Colors.white,
