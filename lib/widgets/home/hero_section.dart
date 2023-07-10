@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:marc_klesiewicz/widgets/misc/fade_in.dart';
 import 'package:rive/rive.dart';
 import 'package:marc_klesiewicz/utils/utils.dart';
 import 'package:marc_klesiewicz/widgets/misc/animation_scene.dart';
@@ -41,15 +42,21 @@ class _HeroSectionState extends State<HeroSection> {
       return Stack(
         alignment: Alignment.center,
         children: [
-          AnimationScene(
-            _file!.mainArtboard,
-            trigger: 'pressedExpand',
+          FadeIn(
+            duration: const Duration(seconds: 3),
+            child: AnimationScene(
+              _file!.mainArtboard,
+              trigger: 'pressedExpand',
+            ),
           ),
-          Padding(
-            padding: Insets.x05,
-            child: SvgPicture.asset(appLocale == 'da'
-                ? 'assets/svgs/brand_da.svg'
-                : 'assets/svgs/brand_en.svg'),
+          FadeIn(
+            duration: const Duration(seconds: 2),
+            child: Padding(
+              padding: Insets.x05,
+              child: SvgPicture.asset(appLocale == 'da'
+                  ? 'assets/svgs/brand_da.svg'
+                  : 'assets/svgs/brand_en.svg'),
+            ),
           )
         ],
       );
