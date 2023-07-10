@@ -40,7 +40,7 @@ class _WorkSectionState extends State<WorkSection> {
         Stack(
           alignment: Alignment.center,
           children: [
-            AnimationScene(_file!.mainArtboard),
+            if (_file != null) AnimationScene(_file!.mainArtboard),
             Container(
               color: context.colors.primary,
               padding: Insets.x02,
@@ -87,7 +87,7 @@ class _WorkSectionState extends State<WorkSection> {
             ].gap(Gaps.lgV),
           ),
         ),
-        AnimationScene(_file!.mainArtboard),
+        if (_file != null) AnimationScene(_file!.mainArtboard),
       ].gap(Gaps.lgV),
     );
   }

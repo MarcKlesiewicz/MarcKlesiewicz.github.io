@@ -180,11 +180,13 @@ class __MenuButtonState extends State<_MenuButton> {
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      child: AnimationScene(
-        _file!.mainArtboard,
-        trigger: widget.showMenu ? 'closePressed' : 'openPressed',
-        onTap: () => widget.onChanged(),
-      ),
+      child: _file != null
+          ? AnimationScene(
+              _file!.mainArtboard,
+              trigger: widget.showMenu ? 'closePressed' : 'openPressed',
+              onTap: () => widget.onChanged(),
+            )
+          : const SizedBox(),
     );
   }
 }
@@ -323,7 +325,8 @@ class _NavbarItemsState extends State<_NavbarItems> {
               AnimatedContainer(
                 width: isHovering ? 400 : 0,
                 duration: Durations.ms200,
-                child: AnimationScene(_file!.mainArtboard),
+                child:
+                    _file != null ? AnimationScene(_file!.mainArtboard) : null,
               )
             ],
           ),
