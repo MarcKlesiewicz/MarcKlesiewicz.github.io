@@ -37,8 +37,8 @@ const RESOURCES = {"assets/AssetManifest.bin": "9cc86f4421f90874c22871e915dc2d64
 "assets/assets/fonts/Montserrat-SemiBoldItalic.ttf": "d41c0a341637c2e35ae019730b2d45a5",
 "assets/assets/fonts/Montserrat-Thin.ttf": "4b73d125bab54f94ed2510590c237f73",
 "assets/assets/fonts/Montserrat-ThinItalic.ttf": "59cdce8fbd384a39ab0fd14b9f693de5",
-"assets/assets/i18n/da.json": "7189a866409482f4cbb17ef0f36bc5c1",
-"assets/assets/i18n/en.json": "a41698dfa98f17042d23a35d6e08350a",
+"assets/assets/i18n/da.json": "b148b35c08e9d30199026cde0aee2237",
+"assets/assets/i18n/en.json": "2a63f058038a17d006c952ad08798baf",
 "assets/assets/icons/icon-android-notification.png": "8bc2d298b080280331c708319e02d47a",
 "assets/assets/icons/icon-android.png": "36b311e8627cf48a010b77bbf2fe9d97",
 "assets/assets/icons/icon-ios.png": "a8d468ec09d656c514e9786ae7bfd279",
@@ -68,11 +68,11 @@ const RESOURCES = {"assets/AssetManifest.bin": "9cc86f4421f90874c22871e915dc2d64
 "flutter.js": "6b515e434cea20006b3ef1726d2c8894",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "1ea33038c1ca7779b9df4ebc54de6dad",
-"/": "1ea33038c1ca7779b9df4ebc54de6dad",
-"main.dart.js": "f9ff1b175de2b1b6e3f6d14989bdf355",
+"index.html": "47d13559ab4408e6bbeb94f089e71d5a",
+"/": "47d13559ab4408e6bbeb94f089e71d5a",
+"main.dart.js": "a98b18b7eed0ed14cf489b5c619206a9",
 "manifest.json": "246661e9355cf24b4f9cfc72cc000cc2",
-"version.json": "e2b17b502e4b0ce0d598939bf4dcc9ec"};
+"version.json": "c4fa1175a6f24aea36519321aa977adf"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
