@@ -40,7 +40,10 @@ class _HeroSectionState extends State<HeroSection> {
       return Stack(
         alignment: Alignment.center,
         children: [
-          AnimationScene(_file!.mainArtboard),
+          AnimationScene(
+            _file!.mainArtboard,
+            trigger: 'pressedExpand',
+          ),
           Padding(
             padding: Insets.x05,
             child: SvgPicture.asset('assets/svgs/brand_en.svg'),

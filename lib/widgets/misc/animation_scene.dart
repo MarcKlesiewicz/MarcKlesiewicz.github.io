@@ -7,16 +7,28 @@ import 'package:rive_common/math.dart' show Vec2D;
 
 class AnimationScene extends StatelessWidget {
   final RiveAvatar _avatar;
+  final String? trigger;
+  final void Function()? onTap;
 
   AnimationScene(
     Artboard? cachedArtboard, {
     super.key,
-  }) : _avatar = RiveAvatar(cachedArtboard);
+    this.trigger,
+    this.onTap,
+  }) : _avatar = RiveAvatar(
+          cachedArtboard,
+          trigger,
+        );
 
   @override
   Widget build(BuildContext context) => FittedBox(
         child: GestureDetector(
-          onTapDown: _avatar.onTapDown,
+          onTapDown: (details) {
+            _avatar.onTapDown(details);
+            if (onTap != null) {
+              onTap!();
+            }
+          },
           child: MouseRegion(
             onExit: (_) => _avatar.onExit(),
             onHover: (event) => _avatar.move(event.localPosition),
@@ -33,25 +45,18 @@ class AnimationScene extends StatelessWidget {
 
 /// Controller for an interactive avatar.
 class RiveAvatar {
-  /// The main artboard from which controller, inputs, etc. will be taken.
   late final Artboard _artboard;
 
-  /// Storing all inputs and used here for [pointerMove()] method mainly.
   late final StateMachineController _controller;
 
-  /// Additional exit and onTap/onPress animation triggers.
   SMITrigger? _exitInput;
   SMITrigger? _pressInput;
 
-  ///  Artboard to provide for [Rive] widget.
   Artboard get artboard => _artboard;
 
-  /// Shorthand for animations caching, if used before the runApp(),
-  /// WidgetsFlutterBinding.ensureInitialized() has to be called first.
-  // static Future<RiveFile> get cachedAnimation async =>
-  //     await RiveFile.('assets/images/avatar.riv');
+  String? trigger;
 
-  RiveAvatar(Artboard? artboard) {
+  RiveAvatar(Artboard? artboard, String? trigger) {
     if (artboard == null) {
       throw Exception('No artboards cached!');
     }
@@ -64,7 +69,9 @@ class RiveAvatar {
 
     /// Also available in _controller.inputs list.
     _exitInput = _controller.findTrigger('exited');
-    _pressInput = _controller.findTrigger('pressedExpand');
+    if (trigger != null) {
+      _pressInput = _controller.findTrigger(trigger);
+    }
   }
 
   /// Interface for eyes/head moving from pointer's offset coordinates.

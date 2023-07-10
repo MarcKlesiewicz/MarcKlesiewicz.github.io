@@ -43,6 +43,7 @@ class _WorkSectionState extends State<WorkSection> {
             AnimationScene(_file!.mainArtboard),
             Container(
               color: context.colors.primary,
+              padding: Insets.x02,
               child: Text(
                 translate('work'),
                 style: TextStyle(
@@ -115,6 +116,7 @@ class _WorkplaceRow extends StatelessWidget {
             color: context.colors.secondary,
             fontFamily: 'Montserrat',
             fontSize: 22,
+            fontWeight: FontWeight.w500,
           ),
         ),
         Gaps.lgH,

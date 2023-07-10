@@ -5,6 +5,7 @@ import 'package:template/utils/utils.dart';
 import 'package:template/widgets/home/hero_section.dart';
 import 'package:template/widgets/home/social_section.dart';
 import 'package:template/widgets/home/work_section.dart';
+import 'package:template/widgets/misc/default_scaffold.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -19,9 +20,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final screenSize = Size(
         MediaQuery.of(context).size.width, MediaQuery.of(context).size.height);
-    return Scaffold(
-      backgroundColor: context.colors.primary,
-      body: Center(
+    return DefaultScaffold(
+      child: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 750),
           child: SingleChildScrollView(
@@ -34,7 +34,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const WorkSection(),
                 Gaps.lgV,
-                const SocialSection()
+                const SocialSection(),
+                Gaps.lgV,
               ],
             ),
           ),
