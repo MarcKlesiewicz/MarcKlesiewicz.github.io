@@ -74,7 +74,7 @@ class __SocialButtonState extends State<_SocialButton> {
           IconButton(
             onPressed: () => _launchUrl(),
             icon: SvgPicture.asset(
-              'svgs/${widget.fileName}.svg',
+              'assets/svgs/${widget.fileName}.svg',
             ),
           ),
           AnimatedOpacity(
@@ -83,7 +83,7 @@ class __SocialButtonState extends State<_SocialButton> {
             child: IconButton(
               onPressed: () => _launchUrl(),
               icon: SvgPicture.asset(
-                'svgs/${widget.fileName}.svg',
+                'assets/svgs/${widget.fileName}.svg',
                 colorFilter: ColorFilter.mode(
                   context.colors.onPrimary,
                   BlendMode.srcIn,

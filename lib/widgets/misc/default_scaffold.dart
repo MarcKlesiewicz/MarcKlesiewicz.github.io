@@ -122,7 +122,7 @@ class __LocaleSelectorState extends State<_LocaleSelector> {
                     appLocale == 'da' ? 'en' : 'da',
                   ),
                   icon: SvgPicture.asset(
-                    'svgs/globe.svg',
+                    'assets/svgs/globe.svg',
                     colorFilter: ColorFilter.mode(
                       context.colors.onPrimary,
                       BlendMode.srcIn,
