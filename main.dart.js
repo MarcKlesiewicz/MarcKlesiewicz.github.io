@@ -71232,7 +71232,7 @@ P(a){return A.asA(A.a9q(A.a([B.abF,B.abB,B.abD,B.abC,B.abE],t.oB),B.Lj),B.yx,B.h
 A.kx.prototype={
 ae(){return new A.a12(B.o)}}
 A.a12.prototype={
-P(a){var s=this,r="svgs/"+s.a.c+".svg",q=A.a8e(A.Rn(r,null),new A.aoy(s)),p=s.d?1:0
+P(a){var s=this,r="assets/svgs/"+s.a.c+".svg",q=A.a8e(A.Rn(r,null),new A.aoy(s)),p=s.d?1:0
 return A.n2(A.nw(B.cv,A.a([q,A.ar3(A.a8e(A.Rn(r,new A.xb(A.iG(a).a.c,B.ex,null,B.lW)),new A.aoz(s)),B.aa,p)],t.D),B.ck),B.bb,new A.aoA(s),new A.aoB(s),null)},
 pY(){var s=0,r=A.W(t.H),q=this,p
 var $async$pY=A.X(function(a,b){if(a===1)return A.T(b,r)
@@ -71336,12 +71336,12 @@ $S:0}
 A.Cz.prototype={
 ae(){return new A.a0G(B.o)}}
 A.a0G.prototype={
-P(a){var s,r,q,p,o=this,n=null,m="svgs/globe.svg",l=a.aC(t.Gk).r.f.nE("_")
-if(o.a.c){s=l==="da"?"Change locale to english":"Skift locale til dansk"
+P(a){var s,r,q,p,o=this,n=null,m=a.aC(t.Gk).r.f.nE("_")
+if(o.a.c){s=m==="da"?"Change locale to english":"Skift locale til dansk"
 r=A.iG(a)
-q=A.a8e(A.Rn(m,n),new A.aon(o,l))
+q=A.a8e(A.Rn("svgs/globe.svg",n),new A.aon(o,m))
 p=o.d?1:0
-return A.aM_(A.n2(A.nw(B.cv,A.a([q,A.ar3(A.a8e(A.Rn(m,new A.xb(A.iG(a).a.c,B.ex,n,B.lW)),new A.aoo(o,l)),B.aa,p)],t.D),B.ck),B.bb,new A.aop(o),new A.aoq(o),n),new A.f9(r.a.f,n,n,B.Fa,n,n,B.bt),s,B.a65)}else return B.k2},
+return A.aM_(A.n2(A.nw(B.cv,A.a([q,A.ar3(A.a8e(A.Rn("assets/svgs/globe.svg",new A.xb(A.iG(a).a.c,B.ex,n,B.lW)),new A.aoo(o,m)),B.aa,p)],t.D),B.ck),B.bb,new A.aop(o),new A.aoq(o),n),new A.f9(r.a.f,n,n,B.Fa,n,n,B.bt),s,B.a65)}else return B.k2},
 un(a){return this.Zn(a)},
 Zn(a){var s=0,r=A.W(t.H),q=this,p
 var $async$un=A.X(function(b,c){if(b===1)return A.T(c,r)
