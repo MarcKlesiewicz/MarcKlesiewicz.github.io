@@ -140,9 +140,7 @@ class __LocaleSelectorState extends State<_LocaleSelector> {
   }
 
   Future<void> _changeAppLocale(String locale) async {
-    if (context.mounted) {
-      changeLocale(context, locale);
-    }
+    changeLocale(context, locale);
   }
 }
 
