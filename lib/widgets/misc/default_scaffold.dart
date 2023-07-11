@@ -1,9 +1,12 @@
 import 'dart:ui';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+import 'package:marc_klesiewicz/router/router.gr.dart';
+import 'package:marc_klesiewicz/widgets/dialogs/show_default_dialog.dart';
 import 'package:marc_klesiewicz/widgets/home/social_section.dart';
 import 'package:rive/rive.dart';
 import 'package:marc_klesiewicz/theme/theme_definition.dart';
@@ -27,12 +30,26 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
 
   @override
   Widget build(BuildContext context) {
+    final showHomeButton = context.router.currentPath.split('/').last != 'home';
     return Scaffold(
       backgroundColor: context.colors.primary,
       body: Stack(
         children: [
           widget.child,
-          _MenuView(showMenu: _showMenu),
+          _MenuView(
+            showMenu: _showMenu,
+            onChanged: () {
+              setState(() {
+                _showMenu = false;
+              });
+            },
+          ),
+          if (showHomeButton && !_showMenu)
+            const Positioned(
+              left: 16,
+              top: 16,
+              child: _HomeButton(),
+            ),
           Positioned(
             left: 16,
             top: 16,
@@ -57,6 +74,41 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _HomeButton extends StatefulWidget {
+  const _HomeButton({Key? key}) : super(key: key);
+
+  @override
+  State<_HomeButton> createState() => __HomeButtonState();
+}
+
+class __HomeButtonState extends State<_HomeButton> {
+  bool isHovering = false;
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      onEnter: (event) {
+        setState(() {
+          isHovering = true;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          isHovering = false;
+        });
+      },
+      child: GestureDetector(
+        onTap: () {
+          showNotImplementedSnackBar(context);
+        },
+        child: SvgPicture.asset(
+          'assets/svgs/nav_home.svg',
+        ),
       ),
     );
   }
@@ -195,14 +247,21 @@ class __MenuButtonState extends State<_MenuButton> {
   }
 }
 
-class _MenuView extends StatelessWidget {
+class _MenuView extends StatefulWidget {
+  final void Function() onChanged;
   const _MenuView({
     super.key,
     required bool showMenu,
+    required this.onChanged,
   }) : _showMenu = showMenu;
 
   final bool _showMenu;
 
+  @override
+  State<_MenuView> createState() => _MenuViewState();
+}
+
+class _MenuViewState extends State<_MenuView> {
   @override
   Widget build(BuildContext context) {
     return ClipRect(
@@ -210,52 +269,61 @@ class _MenuView extends StatelessWidget {
         filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
         child: AnimatedContainer(
           duration: Durations.ms200,
-          height: _showMenu ? MediaQuery.of(context).size.height : 0,
+          height: widget._showMenu ? MediaQuery.of(context).size.height : 0,
           width: MediaQuery.of(context).size.width,
           color: context.colors.tertiary.withOpacity(0.3),
-          child: Column(
-            children: [
-              const Expanded(
-                flex: 1,
-                child: SizedBox(),
-              ),
-              Expanded(
-                flex: 3,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _NavbarItems(
-                      onPressed: () {},
-                      text: translate('home'),
-                      isSelected: true,
-                    ),
-                    _NavbarItems(
-                      onPressed: () {},
-                      text: translate('who_is_marc'),
-                      isSelected: true,
-                    ),
-                    _NavbarItems(
-                      onPressed: () {},
-                      text: translate('projects'),
-                      isSelected: true,
-                    ),
-                    _NavbarItems(
-                      onPressed: () {},
-                      text: translate('side_quests'),
-                      isSelected: true,
-                    ),
-                  ].gap(Gaps.mdV),
+          child: AnimatedOpacity(
+            opacity: widget._showMenu ? 1 : 0,
+            duration: Durations.ms800,
+            child: Column(
+              children: [
+                const Expanded(
+                  flex: 1,
+                  child: SizedBox(),
                 ),
-              ),
-              const Expanded(
-                flex: 1,
-                child: SocialSection(),
-              )
-            ],
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _NavbarItems(
+                        onPressed: () {},
+                        text: translate('home'),
+                        isSelected: true,
+                      ),
+                      _NavbarItems(
+                        onPressed: () => _handleNavigation(const AboutRoute()),
+                        text: translate('who_is_marc'),
+                        isSelected: true,
+                      ),
+                      _NavbarItems(
+                        onPressed: () {},
+                        text: translate('projects'),
+                        isSelected: true,
+                      ),
+                      _NavbarItems(
+                        onPressed: () {},
+                        text: translate('side_quests'),
+                        isSelected: true,
+                      ),
+                    ].gap(Gaps.mdV),
+                  ),
+                ),
+                const Expanded(
+                  flex: 1,
+                  child: SocialSection(),
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
+  }
+
+  _handleNavigation(PageRouteInfo page) {
+    widget.onChanged();
+    context.router.navigate(page);
   }
 }
 
