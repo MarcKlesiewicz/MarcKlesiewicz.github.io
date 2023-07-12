@@ -34,5 +34,14 @@
   "home": "Home",
   "who_is_marc": "Hvem er Marc?",
   "projects": "Projekter",
-  "side_quests": "Side Quests"
+  "side_quests": "Side Quests",
+  "by": "af",
+  "about_types": {
+    "long": "mig selv (lang version)",
+    "speed": "myself (speed-date)",
+    "generated": "ChatGBT",
+    "mom": "min mor"
+  },
+  "experince_and_knowledge": "Kendskab & Erfaringer",
+  "skill_info": "Jeg bruger naturligvis ikke alle disse værktøjer på daglig basis."
 }
