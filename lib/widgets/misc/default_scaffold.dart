@@ -16,9 +16,11 @@ import 'package:marc_klesiewicz/widgets/misc/animation_scene.dart';
 
 class DefaultScaffold extends StatefulWidget {
   final Widget child;
+  final Color? backgroundColor;
   const DefaultScaffold({
     Key? key,
     required this.child,
+    this.backgroundColor,
   }) : super(key: key);
 
   @override
@@ -32,7 +34,7 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
   Widget build(BuildContext context) {
     final showHomeButton = context.router.currentPath.split('/').last != 'home';
     return Scaffold(
-      backgroundColor: context.colors.primary,
+      backgroundColor: widget.backgroundColor ?? context.colors.primary,
       body: Stack(
         children: [
           widget.child,

@@ -241,6 +241,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.2.1+1"
+  dropdown_button3:
+    dependency: "direct main"
+    description:
+      name: dropdown_button3
+      sha256: "42af90c31deb237ce635dee9bcb5054c2655f185bbad8498cbc7c6745ab8f0f6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   dyn_mouse_scroll:
     dependency: "direct main"
     description:
@@ -269,10 +277,10 @@ packages:
     dependency: transitive
     description:
       name: file
-      sha256: "1b92bec4fc2a72f59a8e15af5f52cd441e4a7860b49499d69dfa817af20e925d"
+      sha256: "5fc22d7c25582e38ad9a8515372cd9a93834027aacf1801cf01164dac0ffa08c"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.4"
+    version: "7.0.0"
   file_selector_linux:
     dependency: transitive
     description:

@@ -34,5 +34,14 @@
   "home": "Home",
   "who_is_marc": "Who is Marc?",
   "projects": "Projects",
-  "side_quests": "Side Quests"
+  "side_quests": "Side Quests",
+  "by": "by",
+  "about_types": {
+    "long": "myself (long version)",
+    "speed": "myself (speed-date)",
+    "generated": "ChatGBT",
+    "mom": "my mom"
+  },
+  "experince_and_knowledge": "Experinces & Knowledge",
+  "skill_info": "Obviously, I don't use all of these tools on a daily basis."
 }
