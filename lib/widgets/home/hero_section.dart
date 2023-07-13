@@ -17,51 +17,48 @@ class HeroSection extends StatefulWidget {
 }
 
 class _HeroSectionState extends State<HeroSection> {
-  RiveFile? _file;
+  // RiveFile? _file;
 
-  @override
-  void initState() {
-    super.initState();
-    preload();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   preload();
+  // }
 
-  Future<void> preload() async {
-    rootBundle.load('assets/animations/lunar_expansion.riv').then(
-      (data) async {
-        setState(() {
-          _file = RiveFile.import(data);
-        });
-      },
-    );
-  }
+  // Future<void> preload() async {
+  //   rootBundle.load('assets/animations/lunar_expansion.riv').then(
+  //     (data) async {
+  //       setState(() {
+  //         _file = RiveFile.import(data);
+  //       });
+  //     },
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
     final appLocale = Localizations.localeOf(context).toString();
-    if (_file != null) {
-      return Stack(
-        alignment: Alignment.center,
-        children: [
-          FadeIn(
+    // if (_file != null) {
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        FadeIn(
             duration: const Duration(seconds: 3),
-            child: AnimationScene(
-              _file!.mainArtboard,
-              trigger: 'pressedExpand',
-            ),
+            child:
+                RiveAnimation.asset('assets/animations/lunar_expansion.riv')),
+        FadeIn(
+          duration: const Duration(seconds: 2),
+          child: Padding(
+            padding: Insets.x05,
+            child: SvgPicture.asset(appLocale == 'da'
+                ? 'assets/svgs/brand_da.svg'
+                : 'assets/svgs/brand_en.svg'),
           ),
-          FadeIn(
-            duration: const Duration(seconds: 2),
-            child: Padding(
-              padding: Insets.x05,
-              child: SvgPicture.asset(appLocale == 'da'
-                  ? 'assets/svgs/brand_da.svg'
-                  : 'assets/svgs/brand_en.svg'),
-            ),
-          )
-        ],
-      );
-    } else {
-      return const SizedBox();
-    }
+        )
+      ],
+    );
+    // } else {
+    //   return const SizedBox();
+    // }
   }
 }
