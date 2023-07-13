@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:marc_klesiewicz/theme/theme_definition.dart';
 import 'package:marc_klesiewicz/utils/utils.dart';
 import 'package:marc_klesiewicz/widgets/about/about_description_section.dart';
+import 'package:marc_klesiewicz/widgets/about/about_points_section.dart';
 import 'package:marc_klesiewicz/widgets/about/about_skill_section.dart';
 import 'package:marc_klesiewicz/widgets/misc/default_scaffold.dart';
 import 'package:marc_klesiewicz/widgets/misc/default_scrollbar.dart';
@@ -36,6 +37,8 @@ class _AboutPageState extends State<AboutPage> {
                     AboutDescriptionSection(),
                     Gaps.lgV,
                     AboutSkillSection(),
+                    Gaps.lgV,
+                    AboutPointsSection(),
                     Gaps.lgV,
                   ],
                 ),

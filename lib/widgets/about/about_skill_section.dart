@@ -179,7 +179,10 @@ class _SkillInfoButtonState extends State<SkillInfoButton> {
               showInfo = !showInfo;
             });
           },
-          icon: const Icon(Icons.info_outline),
+          icon: Icon(
+            Icons.info_outline,
+            color: context.colors.primary.withOpacity(0.3),
+          ),
         ),
         AnimatedCrossFade(
           firstChild: LabelSmall.primary(

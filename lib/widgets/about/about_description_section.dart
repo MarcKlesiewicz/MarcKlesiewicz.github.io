@@ -21,7 +21,6 @@ class _AboutDescriptionSectionState extends State<AboutDescriptionSection> {
     final screenSize = Size(
         MediaQuery.of(context).size.width, MediaQuery.of(context).size.height);
     return Container(
-      height: screenSize.width <= 600 ? null : screenSize.height,
       padding: screenSize.width <= 600 ? Insets.x05 : EdgeInsets.zero,
       child: Column(
         children: [
@@ -67,10 +66,10 @@ class _MainSection extends StatefulWidget {
 
 class _MainSectionState extends State<_MainSection> {
   final _abouts = [
-    'Jeg er 28 år og opvokset på Lolland, men bor nu i Odense for at studere til Datamatiker (3. semester) - som også er det jeg bruger det meste af min tid på. Jeg bor i et lille hus sammen med min kæreste Mathilde og vores hund Cody.Mit studie reflekterer mine interesser, i form af egne projekter - og ellers bruger jeg min tid på musik, film og både større og mindre byggeprojekter - fx har vi selv bygget vores hus.\n\nInteressen for teknologi og software har altid fulgt mig på hobby-niveau, det var dog først i 2019 at jeg besluttede mig for at prøve at forstå den - hvilket jeg indså, ikke var så let...\n Jeg gjorde som mange andre, og så et par programmerings-tutorials, hvor jeg med det samme blev hooked. \nSå meget at jeg sendte min gamle UU vejleder en negativ tanke, for ikke at introducere mig for ideen om at blive softwareudvikler.',
-    'speed date version is now showing',
-    'generated version is now showing',
-    'mom version is now showing'
+    translate('abouts_long'),
+    translate('abouts_speed'),
+    translate('abouts_generated'),
+    'WIB'
   ];
   @override
   Widget build(BuildContext context) {
