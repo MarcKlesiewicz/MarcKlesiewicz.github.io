@@ -17,35 +17,38 @@ class HeroSection extends StatefulWidget {
 }
 
 class _HeroSectionState extends State<HeroSection> {
-  // RiveFile? _file;
+  RiveFile? _file;
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   preload();
-  // }
+  @override
+  void initState() {
+    super.initState();
+    preload();
+  }
 
-  // Future<void> preload() async {
-  //   rootBundle.load('assets/animations/lunar_expansion.riv').then(
-  //     (data) async {
-  //       setState(() {
-  //         _file = RiveFile.import(data);
-  //       });
-  //     },
-  //   );
-  // }
+  Future<void> preload() async {
+    rootBundle.load('assets/animations/lunar_expansion.riv').then(
+      (data) async {
+        setState(() {
+          _file = RiveFile.import(data);
+        });
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     final appLocale = Localizations.localeOf(context).toString();
-    // if (_file != null) {
+
     return Stack(
       alignment: Alignment.center,
       children: [
         FadeIn(
-            duration: const Duration(seconds: 3),
-            child:
-                RiveAnimation.asset('assets/animations/lunar_expansion.riv')),
+          duration: const Duration(seconds: 3),
+          child: RiveAnimation.network(
+            'https://cdn.rive.app/animations/vehicles.riv',
+            fit: BoxFit.cover,
+          ),
+        ),
         FadeIn(
           duration: const Duration(seconds: 2),
           child: Padding(
@@ -57,8 +60,5 @@ class _HeroSectionState extends State<HeroSection> {
         )
       ],
     );
-    // } else {
-    //   return const SizedBox();
-    // }
   }
 }
