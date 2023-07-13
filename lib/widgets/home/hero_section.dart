@@ -44,8 +44,8 @@ class _HeroSectionState extends State<HeroSection> {
       children: [
         FadeIn(
           duration: const Duration(seconds: 3),
-          child: RiveAnimation.network(
-            'https://cdn.rive.app/animations/vehicles.riv',
+          child: RiveAnimation.asset(
+            'assets/animations/lunar_expansion.riv',
             fit: BoxFit.cover,
           ),
         ),

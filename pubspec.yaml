@@ -39,7 +39,6 @@ dependencies:
   responsive_builder: ^0.7.0
   dyn_mouse_scroll: ^1.0.7
   rive: ^0.7.16
-  rive_common: ^0.1.0
   url_launcher: ^6.1.12
   dropdown_button3: ^3.0.0
 
