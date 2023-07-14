@@ -7,6 +7,7 @@ import 'package:marc_klesiewicz/widgets/about/about_points_section.dart';
 import 'package:marc_klesiewicz/widgets/about/about_skill_section.dart';
 import 'package:marc_klesiewicz/widgets/misc/default_scaffold.dart';
 import 'package:marc_klesiewicz/widgets/misc/default_scrollbar.dart';
+import 'package:marc_klesiewicz/widgets/misc/fade_in.dart';
 
 @RoutePage()
 class AboutPage extends StatefulWidget {
@@ -24,23 +25,26 @@ class _AboutPageState extends State<AboutPage> {
       backgroundColor: context.colors.onPrimary,
       child: DefaultScrollbar(
         scrollController: _scrollController,
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 750),
-            child: ScrollConfiguration(
-              behavior:
-                  ScrollConfiguration.of(context).copyWith(scrollbars: false),
-              child: SingleChildScrollView(
-                controller: _scrollController,
-                child: const Column(
-                  children: [
-                    AboutDescriptionSection(),
-                    Gaps.lgV,
-                    AboutSkillSection(),
-                    Gaps.lgV,
-                    AboutPointsSection(),
-                    Gaps.lgV,
-                  ],
+        child: FadeIn(
+          duration: Durations.ms800,
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 750),
+              child: ScrollConfiguration(
+                behavior:
+                    ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                child: SingleChildScrollView(
+                  controller: _scrollController,
+                  child: const Column(
+                    children: [
+                      AboutDescriptionSection(),
+                      Gaps.lgV,
+                      AboutSkillSection(),
+                      Gaps.lgV,
+                      AboutPointsSection(),
+                      Gaps.lgV,
+                    ],
+                  ),
                 ),
               ),
             ),

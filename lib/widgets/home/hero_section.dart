@@ -42,13 +42,7 @@ class _HeroSectionState extends State<HeroSection> {
     return Stack(
       alignment: Alignment.center,
       children: [
-        FadeIn(
-          duration: const Duration(seconds: 3),
-          child: RiveAnimation.asset(
-            'assets/animations/lunar_expansion.riv',
-            fit: BoxFit.cover,
-          ),
-        ),
+        if (_file != null) AnimationScene(_file!.artboards.first),
         FadeIn(
           duration: const Duration(seconds: 2),
           child: Padding(

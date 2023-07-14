@@ -94,9 +94,14 @@ class _MainSectionState extends State<_MainSection> {
             children: [
               Container(
                 clipBehavior: Clip.antiAlias,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadiuses.r02,
-                ),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadiuses.r02, boxShadow: [
+                  BoxShadow(
+                    color: context.colors.primary.withOpacity(0.2),
+                    offset: const Offset(2, 3),
+                    blurRadius: 10,
+                  )
+                ]),
                 child: Image.asset(
                   'assets/images/me.jpg',
                   height: 450,
@@ -110,9 +115,11 @@ class _MainSectionState extends State<_MainSection> {
                   child: CircleAvatar(
                     radius: 50,
                     backgroundColor: context.colors.onPrimary,
-                    child: const CircleAvatar(
+                    child: CircleAvatar(
+                      backgroundColor: context.colors.onPrimary,
                       radius: 45,
-                      backgroundImage: AssetImage('assets/images/avatar.png'),
+                      backgroundImage:
+                          const AssetImage('assets/images/avatar.png'),
                     ),
                   ),
                 ),

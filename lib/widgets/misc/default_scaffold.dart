@@ -32,7 +32,6 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
 
   @override
   Widget build(BuildContext context) {
-    final showHomeButton = context.router.currentPath.split('/').last != 'home';
     return Scaffold(
       backgroundColor: widget.backgroundColor ?? context.colors.primary,
       body: Stack(
@@ -46,12 +45,6 @@ class _DefaultScaffoldState extends State<DefaultScaffold> {
               });
             },
           ),
-          if (showHomeButton && !_showMenu)
-            const Positioned(
-              left: 16,
-              top: 16,
-              child: _HomeButton(),
-            ),
           Positioned(
             left: 16,
             top: 16,

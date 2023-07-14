@@ -10,7 +10,9 @@ import 'package:marc_klesiewicz/widgets/text/text_settings.dart';
 import 'package:rive/rive.dart';
 
 class AboutSkillSection extends StatefulWidget {
-  const AboutSkillSection({Key? key}) : super(key: key);
+  const AboutSkillSection({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<AboutSkillSection> createState() => _AboutSkillSectionState();
