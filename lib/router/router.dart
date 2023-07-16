@@ -16,6 +16,10 @@ class AppRouter extends $AppRouter {
             page: AboutRoute.page,
             path: '/about',
             transitionsBuilder: TransitionsBuilders.fadeIn),
+        CustomRoute(
+            page: ProjectsRoute.page,
+            path: '/projects',
+            transitionsBuilder: TransitionsBuilders.fadeIn),
       ],
     );
   }

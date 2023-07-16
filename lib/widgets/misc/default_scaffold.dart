@@ -292,7 +292,8 @@ class _MenuViewState extends State<_MenuView> {
                         isSelected: true,
                       ),
                       _NavbarItems(
-                        onPressed: () {},
+                        onPressed: () =>
+                            _handleNavigation(const ProjectsRoute()),
                         text: translate('projects'),
                         isSelected: true,
                       ),
