@@ -61,5 +61,37 @@
     "two": "Filtrering af enheder via søgefelt, top/sub kategorier og lokation",
     "three": "Håndtering af lejeaftaler",
     "four": "1-til-1 live chat"
+  },
+  "selvhent_description": "Selvhent er et digitalt lagerstyringssystem til pakkeshops, der består a to separate systemer.\nEn kundeenhed som er en solid og strømlinet stander med en skærm, der via et intuitivt interface guider dem til en at indgive de nødvendige pakkeoplysninger. En lagerenhed som hjælper pakkeshoppens ansatte med håndtere og administrere lagerets pakkebeholdning og anmodet pakker.",
+  "selvhent_feature": {
+    "one": "Anmodning for afhentning af pakker",
+    "two": "Administrering a pakkebeholdning på lager (nuværende, anmodet og historik)",
+    "three": "Admin panel til håndtering af pakkehops og leverandøre"
+  },
+  "myepi_description": "MyEpi detekterer epileptiske krampeanfald ud fra teknologierne i Apple Watch, hvor vi måler på epileptisk-karakteriserede krampelignende bevægelser.\nNår et anfald er detekteret, sendes alarmopkald og lokation ud til de oprettede kontaktpersoner. ",
+  "myepi_feature": {
+    "one": "Detektering af epileptiske anfald via Apple Watch",
+    "two": "Alarmere pårørende via sms",
+    "three": "Håndtere og administrere anfald historik",
+    "four": "Udskrive periodisk dokumentering af tidligere anfald"
+  },
+  "upndown_description": "Up N’ Down giver dig mere end 50 øvelser som kan hjælpe dig med at udvikle dit golfspil. Appen giver dig mulighed for a browser og udvælge præcis de øvelser som du finder intressant, eller hvis du udfylder nødvendige information, de øvelser du har brug for.",
+  "und_feature": {
+    "one": "Browse og filtrering af øvelser",
+    "two": "Fremvise øvelser i steps og med tilsvarende video",
+    "three": "Like og gemme øvelser"
+  },
+  "parenthood_description": "Parenthood er en app til forældre som søger inspiration eller hjælp til børnopdragelse.\nDerudover sætter app fokus på hvordan du som forældre kan intereragere med din barn gennem aktiviter og samtaleemner. ",
+  "parent_feature": {
+    "apple_login": "Opret/login bruger med Apple account",
+    "two": "Browse og adminitrere aktiviteter",
+    "three": "Browse forældre/barn relateret samtaleemner"
+  },
+  "mealbuilder_description": "Mealbuilder er en app der hjælper som bruger med at finde inspiration til dagens måltider, samtidig med at informere om de enkelte måltider og ingrediensers makro-fordeling. \n\nBruger kan opbygge og administrere måltider efter deres egne behov og ønsker.",
+  "mealbuilder_feature": {
+    "one": "CRUD af måltider",
+    "two": "Kalkulering a makro-fordeling",
+    "three": "Dele måltider lokalt og eksternt fra appen",
+    "four": "Live opdatering via subscriptions"
   }
 }

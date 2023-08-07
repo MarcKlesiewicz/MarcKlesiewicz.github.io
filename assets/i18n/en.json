@@ -61,5 +61,37 @@
     "two": "Filtering units via search field, top/sub categories and location",
     "three": "Handling of rental agreements",
     "four": "1-on-1 live chat"
+  },
+  "selvhent_description": "Selvhent is a digital inventory management system for parcel shops that consists of two separate systems.\n\nA customer unit which is a solid and streamlined stand with a screen that guides them via an intuitive interface to enter the necessary package information. \nA storage unit that helps the parcel shop's employees handle and manage the warehouse's parcel inventory and requested parcels.",
+  "selvhent_feature": {
+    "two": "Management of parcel stock in stock (current, requested and history)",
+    "one": "Request for collection of parcels",
+    "three": "Admin panel for handling parcel hops and suppliers"
+  },
+  "myepi_description": "MyEpi detects epileptic seizures based on the technologies in the Apple Watch, where we measure epileptic-characterized seizure-like movements.\n\nWhen a seizure is detected, an alarm call and location are sent out to the created contacts.",
+  "myepi_feature": {
+    "one": "Detection of epileptic seizures via Apple Watch",
+    "two": "Alert relatives via SMS",
+    "three": "Manage seizure history",
+    "four": "Print periodic documentation of previous seizures"
+  },
+  "upndown_description": "Up N' Down gives you more than 50 exercises that can help you develop your golf game. \nThe app allows you to browse and select exactly the exercises you find interesting, or if you fill in the necessary information, the exercises you need.",
+  "und_feature": {
+    "one": "Browsing and filtering exercises",
+    "two": "Show exercises in steps and with corresponding video",
+    "three": "Like and save exercises"
+  },
+  "parenthood_description": "Parenthood is an app for parents who are looking for inspiration or help with raising children.\n\nIn addition, the app focuses on how you as a parent can interact with your child through activities and topics of conversation.",
+  "parent_feature": {
+    "apple_login": "Create/login user with Apple account",
+    "two": "Browse and manage activities",
+    "three": "Browse parent/child related topics of conversation"
+  },
+  "mealbuilder_description": "Mealbuilder is an app that helps the user find inspiration for today's meals, while also providing information about the individual meals and the macro-distribution of ingredients.\n\n\nUser can build and manage meals according to their own needs and wishes.",
+  "mealbuilder_feature": {
+    "four": "Live update via subscriptions",
+    "three": "Share meals locally and remotely from the app",
+    "two": "Calculation of a macro-distribution",
+    "one": "CRUD of meals"
   }
 }

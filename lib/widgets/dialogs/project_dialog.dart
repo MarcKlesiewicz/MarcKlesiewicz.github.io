@@ -9,6 +9,7 @@ import 'package:marc_klesiewicz/theme/theme_definition.dart';
 import 'package:marc_klesiewicz/utils/utils.dart';
 import 'package:marc_klesiewicz/widgets/text/styled_text.dart';
 import 'package:marc_klesiewicz/widgets/text/text_settings.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectDialog extends StatelessWidget {
@@ -47,7 +48,10 @@ class ProjectDialog extends StatelessWidget {
                         const BoxDecoration(borderRadius: BorderRadiuses.r02),
                     child: ImageSlideshow(
                       isLoop: true,
-                      indicatorColor: context.colors.primary,
+                      indicatorColor: project.imagePaths.length <= 1
+                          ? Colors.transparent
+                          : context.colors.primary,
+                      disableUserScrolling: project.imagePaths.length <= 1,
                       children: project.imagePaths
                           .map(
                             (e) => Image.asset(
@@ -160,16 +164,19 @@ class _ProjectPoints extends StatelessWidget {
             ),
           ),
           ...project.noteableFeatures.map(
-            (e) => Row(
-              children: [
-                Icon(
-                  Icons.circle,
-                  size: 10,
-                  color: context.colors.primary,
-                ),
-                Gaps.smH,
-                Flexible(child: LabelLarge(e))
-              ],
+            (e) => Padding(
+              padding: Insets.y01,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.circle,
+                    size: 10,
+                    color: context.colors.primary,
+                  ),
+                  Gaps.smH,
+                  Flexible(child: LabelLarge(e))
+                ],
+              ),
             ),
           ),
         ],
@@ -181,18 +188,12 @@ class _ProjectPoints extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          RichText(
-            text: TextSpan(
-              style: const TextStyle(
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w500,
-                letterSpacing: 1,
-              ),
-              children: [
-                ...project.techStack.map((e) =>
-                    TextSpan(text: e == project.techStack.last ? e : '$e • ')),
-              ],
-            ),
+          Wrap(
+            alignment: WrapAlignment.center,
+            children: [
+              ...project.techStack.map(
+                  (e) => LabelLarge(e == project.techStack.last ? e : '$e • ')),
+            ],
           ),
         ]
       ],

@@ -39,7 +39,7 @@ class ProjectCollage extends ConsumerWidget {
                       Expanded(
                         flex: 2,
                         child: _ProjectContainer(
-                          project: projects[0],
+                          project: projects[1],
                           backgroundColor: const Color(0xff350f54),
                           height: 225,
                           child: Padding(
@@ -54,7 +54,7 @@ class ProjectCollage extends ConsumerWidget {
                       Expanded(
                         flex: 1,
                         child: _ProjectContainer(
-                          project: projects[0],
+                          project: projects[2],
                           backgroundColor: const Color(0xfffdb1ab),
                           height: 225,
                           child: Image.asset(
@@ -69,7 +69,7 @@ class ProjectCollage extends ConsumerWidget {
                     children: [
                       Expanded(
                         child: _ProjectContainer(
-                          project: projects[0],
+                          project: projects[3],
                           backgroundColor: Colors.white,
                           height: 210,
                           child: Row(
@@ -99,7 +99,7 @@ class ProjectCollage extends ConsumerWidget {
           children: [
             Expanded(
               child: _ProjectContainer(
-                project: projects[0],
+                project: projects[4],
                 backgroundColor: const Color(0xfffc927c),
                 height: 225,
                 child: Padding(
@@ -111,7 +111,7 @@ class ProjectCollage extends ConsumerWidget {
             Gaps.mdH,
             Expanded(
               child: _ProjectContainer(
-                project: projects[0],
+                project: projects[5],
                 backgroundColor: const Color(0xffcaffdb),
                 height: 225,
                 child: Image.asset('assets/images/mealbuilder_logo.png'),
