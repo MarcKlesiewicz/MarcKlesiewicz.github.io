@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:marc_klesiewicz/models/projectmodel.dart';
+import 'package:marc_klesiewicz/providers/projects_provider.dart';
 import 'package:marc_klesiewicz/utils/utils.dart';
+import 'package:marc_klesiewicz/widgets/common/animated_dialog.dart';
+import 'package:marc_klesiewicz/widgets/dialogs/project_dialog.dart';
 
-class ProjectCollage extends StatelessWidget {
+class ProjectCollage extends ConsumerWidget {
   const ProjectCollage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final projects = ref.watch(projectsProvider);
     return Column(
       children: [
         Row(
@@ -14,6 +20,7 @@ class ProjectCollage extends StatelessWidget {
             Expanded(
               flex: 1,
               child: _ProjectContainer(
+                project: projects[0],
                 height: 450,
                 child: Image.asset(
                   'assets/images/monto.jpg',
@@ -32,6 +39,7 @@ class ProjectCollage extends StatelessWidget {
                       Expanded(
                         flex: 2,
                         child: _ProjectContainer(
+                          project: projects[0],
                           backgroundColor: const Color(0xff350f54),
                           height: 225,
                           child: Padding(
@@ -46,6 +54,7 @@ class ProjectCollage extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: _ProjectContainer(
+                          project: projects[0],
                           backgroundColor: const Color(0xfffdb1ab),
                           height: 225,
                           child: Image.asset(
@@ -60,6 +69,7 @@ class ProjectCollage extends StatelessWidget {
                     children: [
                       Expanded(
                         child: _ProjectContainer(
+                          project: projects[0],
                           backgroundColor: Colors.white,
                           height: 210,
                           child: Row(
@@ -89,6 +99,7 @@ class ProjectCollage extends StatelessWidget {
           children: [
             Expanded(
               child: _ProjectContainer(
+                project: projects[0],
                 backgroundColor: const Color(0xfffc927c),
                 height: 225,
                 child: Padding(
@@ -100,6 +111,7 @@ class ProjectCollage extends StatelessWidget {
             Gaps.mdH,
             Expanded(
               child: _ProjectContainer(
+                project: projects[0],
                 backgroundColor: const Color(0xffcaffdb),
                 height: 225,
                 child: Image.asset('assets/images/mealbuilder_logo.png'),
@@ -116,17 +128,22 @@ class _ProjectContainer extends StatelessWidget {
   final Widget child;
   final double height;
   final Color? backgroundColor;
+  final ProjectModel project;
   const _ProjectContainer({
     Key? key,
     required this.child,
     required this.height,
     this.backgroundColor,
+    required this.project,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () => showAnimatedDialog(
+        context,
+        ProjectDialog(project: project),
+      ),
       child: HoverScaleDown(
         child: Container(
           height: height,

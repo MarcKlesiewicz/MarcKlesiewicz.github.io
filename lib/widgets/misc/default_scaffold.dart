@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:marc_klesiewicz/router/router.gr.dart';
-import 'package:marc_klesiewicz/widgets/dialogs/show_default_dialog.dart';
+import 'package:marc_klesiewicz/widgets/dialogs/show_default_snackbar.dart';
 import 'package:marc_klesiewicz/widgets/home/social_section.dart';
 import 'package:rive/rive.dart';
 import 'package:marc_klesiewicz/theme/theme_definition.dart';
@@ -282,7 +282,7 @@ class _MenuViewState extends State<_MenuView> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       _NavbarItems(
-                        onPressed: () {},
+                        onPressed: () => _handleNavigation(const HomeRoute()),
                         text: translate('home'),
                         isSelected: true,
                       ),

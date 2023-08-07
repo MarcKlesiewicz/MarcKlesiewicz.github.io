@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:marc_klesiewicz/models/error_type_model.dart';
-import 'package:marc_klesiewicz/widgets/dialogs/show_default_dialog.dart';
+import 'package:marc_klesiewicz/widgets/dialogs/show_default_snackbar.dart';
 
 Future<T?> handleDioError<T>(
   BuildContext context,
