@@ -298,7 +298,7 @@ class _MenuViewState extends State<_MenuView> {
                         isSelected: true,
                       ),
                       _NavbarItems(
-                        onPressed: () {},
+                        onPressed: () => showNotImplementedSnackBar(context),
                         text: translate('side_quests'),
                         isSelected: true,
                       ),
