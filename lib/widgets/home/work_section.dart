@@ -108,6 +108,7 @@ class _WorkplaceRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final breakPoint = MediaQuery.of(context).size.width <= 600;
     return Row(
       children: [
         Text(
@@ -115,7 +116,7 @@ class _WorkplaceRow extends StatelessWidget {
           style: TextStyle(
             color: context.colors.secondary,
             fontFamily: 'Montserrat',
-            fontSize: 22,
+            fontSize: breakPoint ? 16 : 22,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -125,7 +126,7 @@ class _WorkplaceRow extends StatelessWidget {
             '$workplaceName  ($occupation)',
             style: TextStyle(
               color: context.colors.secondary,
-              fontSize: 32,
+              fontSize: breakPoint ? 24 : 32,
               fontFamily: 'BerkshireSwash',
             ),
           ),
