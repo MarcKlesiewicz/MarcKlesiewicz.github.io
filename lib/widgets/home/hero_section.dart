@@ -42,14 +42,17 @@ class _HeroSectionState extends State<HeroSection> {
     return Stack(
       alignment: Alignment.center,
       children: [
-        if (_file != null) AnimationScene(_file!.artboards.first),
+        if (_file != null)
+          AnimationScene(_file!.artboards.first, trigger: 'pressedExpand'),
         FadeIn(
           duration: const Duration(seconds: 2),
           child: Padding(
             padding: Insets.x05,
-            child: SvgPicture.asset(appLocale == 'da'
-                ? 'assets/svgs/brand_da.svg'
-                : 'assets/svgs/brand_en.svg'),
+            child: IgnorePointer(
+              child: SvgPicture.asset(appLocale == 'da'
+                  ? 'assets/svgs/brand_da.svg'
+                  : 'assets/svgs/brand_en.svg'),
+            ),
           ),
         )
       ],
