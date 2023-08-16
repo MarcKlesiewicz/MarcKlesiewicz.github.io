@@ -89,8 +89,7 @@ class ProjectDialog extends StatelessWidget {
                                     borderRadius: BorderRadiuses.r02),
                               ),
                             ),
-                            onPressed: () =>
-                                launchUrl(Uri(path: project.website!)),
+                            onPressed: () => _launchUrl(),
                             child: const Text('Visit site'),
                           ),
                         ),

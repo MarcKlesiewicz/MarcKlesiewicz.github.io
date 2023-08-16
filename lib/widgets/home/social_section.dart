@@ -19,19 +19,20 @@ class SocialSection extends StatelessWidget {
         ),
         const _SocialButton(
           fileName: 'linkedin_logo',
-          url: 'www.linkedin.com/in/marc-klesiewicz-584910194/',
+          url: 'linkedin.com/in/marc-klesiewicz-584910194/',
         ),
         const _SocialButton(
           fileName: 'instagram_logo',
-          url: 'www.instagram.com/marccmarc',
+          url: 'instagram.com/marccmarc',
         ),
         const _SocialButton(
           fileName: 'facebook_logo',
-          url: 'www.facebook.com/marc.klesiewicz/',
+          url: 'facebook.com/marc.klesiewicz/',
         ),
         const _SocialButton(
           fileName: 'mail_logo',
           url: 'marcklesiewicz21@gmail.com',
+          isMail: true,
         )
       ].gap(Gaps.mdH),
     );
